@@ -1,0 +1,21 @@
+<html>
+<p>HTML is the standard markup language used to create web pages and
+its elements form the building blocks of all websites.</p>
+<hr>
+<h3>Latest HTML 5.1</h3>
+<p>We fixed the focus navigation, removed features due to lack of
+implementations (e.g. document.cssElementMap), various cleanups, etc.
+See also the complete list of changes since the 10 October Public
+Working Draft.</p>
+<hr>
+<h3>Encrypted Media Extensions (EME) is a W3C Recommendation</h3>
+<p>The HTML Media Extensions Working Group published Encrypted Media
+Extensions (EME) as a W3C Recommendation today. Encrypted Media
+Extensions (EME), which extends the ‘HTMLMediaElement’ element of the
+HTML specification, is an Application Programming Interface (API) that
+allows playback of protected content in Web browsers. Combined with
+W3C’s Recommendation Media Source Extensions (MSE) which provides the
+API for streaming video, EME is the most common practice today that
+allows Web developers to stop using plugins to deliver commercial
+quality video over the Web. Please read more in our Press Release.</p>
+</html>

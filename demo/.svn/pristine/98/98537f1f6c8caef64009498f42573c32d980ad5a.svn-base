@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>New Suject</title>
+</head>
+<body>
+<?php 
+$con = mysql_connect("127.0.0.1:3306/milestone","root","");
+if (!$con)
+{
+	die('Could not connect: ' . mysql_error());
+}
+mysql_select_db("milestone", $con);
+?>
+<h2>New Subject</h2>
+<hr>
+<form action="service/subject/subject.create.php" method="post">
+	<table>
+		<!-- set type -->
+		<tr>
+			<td>Type:</td>
+			<td>
+				<select name="mile_type_id">
+				<?php
+					$types = mysql_query("SELECT * FROM milestone.mile_subject_type");
+					while($type = mysql_fetch_array($types)){
+						echo "<option value ='" .$type["id"] ."'>" .$type["name"] ."</option>";
+					}
+				?>
+				</select>
+			</td>
+		</tr>
+		
+		<!-- title and others, for table mile_subject -->
+		<tr>
+			<td>Title:</td>
+			<td><input type="text" name="mile_title"></td>
+		</tr>
+		<tr>
+			<td>Content:</td>
+			<td>			
+			<textarea rows="2" cols="50" name="mile_content"></textarea>
+			</td>
+		</tr>
+	</table>
+	<input type="submit" value="Submit">
+</form>
+<?php mysql_close($con); ?>
+</body>
+</html>

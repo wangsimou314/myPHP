@@ -1,0 +1,15 @@
+<?php
+function db_con(){
+	$con = mysql_connect("127.0.0.1:3306/milestone","root","");
+	if (!$con)
+	{
+		die('Could not connect: ' . mysql_error());
+	}
+	mysql_select_db("milestone", $con);
+	return $con;
+}
+
+function db_dic($con){
+	mysql_close($con);
+}
+?>
